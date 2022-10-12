@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="aziz_kota_kecamatan_action" model="ir.actions.act_window">
+            <field name="name">Data Kecamatan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">aziz_kota.kecamatan</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                    Tambahkan data kecamatan!
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="aziz_kota_kecamatan_view_tree" model="ir.ui.view">
+            <field name="name">aziz_kota.kecamatan.view.tree</field>
+            <field name="model">aziz_kota.kecamatan</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="city_id"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="aziz_kota_kecamatan_view_form" model="ir.ui.view">
+            <field name="name">aziz.kota.kecamatan.view.form</field>
+            <field name="model">aziz_kota.kecamatan</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="city_id"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Deskripsi" name="description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="aziz_kota_kecamatan_view_search" model="ir.ui.view">
+            <field name="name">aziz.kota.kecamatan.view.search</field>
+            <field name="model">aziz_kota.kecamatan</field>
+            <field name="arch" type="xml">
+                <search string="Search Description">
+                    <field name="name"/>
+                    <field name="city_id"/>
+                    <field name="description"/>
+
+                    <filter name="kota_bogor" help="Kota Bogor" domain="[('name','ilike','bogor')]"/> <!-- ilike = insensitive like, mengabaikan besar atau kecil huruf-->
+
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter name="status" string="Status" domain="[]" context="{'group_by' : 'active'}"/>
+                        <filter name="city" string="City" domain="[]" context="{'group_by' : 'city_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+    <menuitem id="aziz_kota_kecamatan"
+                  name="Kecamatan"
+                  parent="aziz_kota_master_root"
+                  action="aziz_kota_kecamatan_action"
+                  sequence="10"/>
+</odoo>

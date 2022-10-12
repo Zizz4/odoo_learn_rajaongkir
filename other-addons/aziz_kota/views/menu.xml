@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <menuitem id="aziz_kota_root"
+                  name="Custom"
+                  sequence="20"/>
+
+        <menuitem id="aziz_kota_master_root"
+                  name="Master Data"
+                  parent="aziz_kota_root"
+                  sequence="10"/>
+
+</odoo>

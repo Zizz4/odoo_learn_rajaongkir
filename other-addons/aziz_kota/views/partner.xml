@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="aziz_kota_res_partner_inherit_view_form" model="ir.ui.view">
+            <field name="name">res.partner.inherit.view.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="zip" position="after">
+                    <field name="city_id" placeholder="Kota / Kabupaten"/>
+                    <field name="kecamatan_id" placeholder="Kecamatan"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

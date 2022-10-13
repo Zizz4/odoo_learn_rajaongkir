@@ -2,6 +2,7 @@
 <odoo>
         <menuitem id="aziz_kota_root"
                   name="Custom"
+                  web_icon="aziz_kota,static/description/icon.png"
                   sequence="20"/>
 
         <menuitem id="aziz_kota_master_root"

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <report
+            id="report_aziz_kota_kota"
+            model="aziz_kota.kota"
+            string="Report Kota"
+            name="aziz_kota.kota_report"
+            file="aziz_kota.report_aziz_kota_kota_document"
+            report_type="qweb-pdf"/>
+        
+        
+        <template id="report_aziz_kota_kota_document">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h1 class="text-center">Report Kota</h1>
+                        <p>
+                            Nama Kota: <label><span t-field="doc.name"/></label>
+                        </p>
+                        <p>
+                            Deskripsi : <label><span t-field="doc.description"/></label>
+                        </p>
+                        <br/>
+                        <table class="table table-bordered table-strip">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Kecamatan</th>
+                                <th>Deskripsi</th> 
+                            </tr>
+                            <t t-if="doc.kecamatan_ids">
+                                <t t-set="no" t-value="1"/>
+                                <tr t-foreach="doc.kecamatan_ids" t-as="row">
+                                    <td><span t-esc="no"/></td>
+                                    <td><span t-field="row.name"/></td>
+                                    <td><span t-field="row.description"/></td>
+                                    <t t-set="no" t-value="no + 1"/>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <template id="kota_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="aziz_kota.report_aziz_kota_kota_document"/>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

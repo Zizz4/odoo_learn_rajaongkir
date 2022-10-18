@@ -16,6 +16,9 @@
         'views/kecamatan.xml',
         'views/partner.xml',
 
+        'reports/kota.xml',
+        
+
     ],
     'demo': [''],
 

@@ -50,7 +50,13 @@
                                 <field name="description"/>
                             </page>
                             <page string="Kecamatan" name="kec">
-                                <field name="kecamatan_ids"/>
+                                <field name="kecamatan_ids">
+                                <tree string="Kecamatan" editable="button">
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="active"/>
+                                </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

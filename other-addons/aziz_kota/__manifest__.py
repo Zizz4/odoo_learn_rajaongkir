@@ -8,13 +8,14 @@
     'author': 'Muhamad Syahril Aziz',
     'website': 'http://ecodigitus.com',
     'license': 'LGPL-3',
-    'depends': ['base'],
+    'depends': ['base', 'base_setup'],
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/kota.xml',
         'views/kecamatan.xml',
         'views/partner.xml',
+        'views/setting.xml',
 
         'reports/kota.xml',
         

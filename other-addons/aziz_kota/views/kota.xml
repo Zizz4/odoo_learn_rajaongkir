@@ -35,6 +35,21 @@
             <field name="model">aziz_kota.kota</field>
             <field name="arch" type="xml">
                 <form string="">
+                    <header>
+                        <button
+                                name="action_generate_province"
+                                type="object"
+                                string="Generate Provinsi"
+                                confirm="Serius mau generate data provinsi dari rajaongkir ?"
+                        />
+                        <button
+                                name="action_generate_kota"
+                                type="object"
+                                string="Generate Kota"
+                                class="oe_highlight"
+                                confirm="Serius mau generate data kota dari rajaongkir ?"
+                        /> <!-- type='object' karena tipenya adalah method-->
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -84,6 +99,7 @@
             </field>
         </record>
     </data>
+
     <menuitem id="aziz_kota_kota"
               name="Kota"
               parent="aziz_kota_master_root"

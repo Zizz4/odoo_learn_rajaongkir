@@ -16,6 +16,7 @@
         'views/kecamatan.xml',
         'views/partner.xml',
         'views/setting.xml',
+        'views/provinsi.xml',
 
         'reports/kota.xml',
         

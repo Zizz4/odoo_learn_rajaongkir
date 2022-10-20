@@ -1,11 +1,11 @@
 from odoo import api, fields, models
 from datetime import datetime
 
+
 class ResConfig(models.TransientModel):
     _inherit = "res.config.settings"
 
     rajaongkir_api_key = fields.Char(string="RajaOngkir API Key")
-
 
     def set_values(self):
         res = super(ResConfig, self).set_values()

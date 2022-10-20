@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="custom_state_view_id" model="ir.ui.view">
+            <field name="name">res.country.state.inherit.view.form</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <field name="country_id" position="after">
+                    <field name="rajaongkir_province_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

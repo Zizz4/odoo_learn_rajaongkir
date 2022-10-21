@@ -23,6 +23,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="rajaongkir_kota_id"/>
+                    <field name="postal_code"/>
                     <field name="state_id"/>
                     <field name="description"/>
                     <field name="active"/>
@@ -57,6 +59,8 @@
                                 <field name="state_id"/>
                             </group>
                             <group>
+                                <field name="rajaongkir_kota_id"/>
+                                <field name="postal_code"/>
                                 <field name="active"/>
                             </group>
                         </group>

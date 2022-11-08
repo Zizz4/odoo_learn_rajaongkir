@@ -9,6 +9,17 @@
             <field name="arch" type="xml">
                 <field name="country_id" position="after">
                     <field name="rajaongkir_province_id"/>
+
+                    <xpath expr="//sheet" position="before">
+                        <header>
+                            <button
+                                    name="generate_kota_rajaongkir"
+                                    type="object"
+                                    string="Generate Kota"
+                                    confirm="Yakin DEK ???"
+                            />
+                        </header>
+                    </xpath>
                 </field>
             </field>
         </record>

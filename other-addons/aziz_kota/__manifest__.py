@@ -18,6 +18,8 @@
         'views/setting.xml',
         'views/provinsi.xml',
 
+        'wizard/kota.xml',
+
         'reports/kota.xml',
         
 

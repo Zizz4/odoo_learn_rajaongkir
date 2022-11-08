@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_aziz_kota_kota,access_aziz_kota_kota,model_aziz_kota_kota,,1,1,1,1
 access_aziz_kota_kecamatan,access_aziz_kota_kecamatan,model_aziz_kota_kecamatan,,1,1,1,1
+access_aziz_kota_wizard,access_aziz_kota_wizard,model_aziz_kota_wizard,,1,1,1,1
